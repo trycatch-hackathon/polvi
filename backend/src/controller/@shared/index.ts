@@ -4,19 +4,21 @@ export class BaseController {
   service: any;
 
   constructor(service: any) {
+    console.log("🚀 ~ file: index.ts:7 ~ BaseController ~ constructor ~ service:", service)
     this.service = service;
   }
 
   async createOne(req: Request<any>, res: Response<any>) {
+    
     const { data } = req.body;
     console.log(
       "🚀 ~ file: index.ts:12 ~ BaseController ~ createOne ~ data:",
       data,
-    );
-
-    await this.service.createOne(data);
-
-    res.status(202);
+      );
+      
+      await this.service.createOne(data);
+      
+      res.status(202).send();
   }
 
   async findUnique(req: Request<any>, res: Response<any>) {

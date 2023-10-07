@@ -1,24 +1,27 @@
-import { app } from "..";
 import { OccurrenceController } from "./controller/occurrence";
 import { PostController } from "./controller/post";
 import { UserController } from "./controller/user";
+import express from 'express'
 
-const routes = app;
+const routes = express.Router()
 
 const userController = new UserController();
 const occurenceController = new OccurrenceController();
-const postControlet = new PostController();
+const postController = new PostController();
 
-app.post(`/user`, userController.createOne);
-app.get(`/user/find-many`, userController.findMany);
-app.post(`/user/find-unique`, userController.findUnique);
+// USER
+routes.post(`/user`, userController.createOne);
+routes.get(`/user/find-many`, userController.findMany);
+routes.get(`/user/find-unique`, userController.findUnique);
 
-app.post(`/occurrence`, occurenceController.createOne);
-app.get(`/occurrence/find-many`, occurenceController.findMany);
-app.post(`/occurrence/find-unique`, occurenceController.findUnique);
+// OCCURRENCE
+routes.post(`/occurrence`, occurenceController.createOne);
+routes.get(`/occurrence/find-many`, occurenceController.findMany);
+routes.get(`/occurrence/find-unique`, occurenceController.findUnique);
 
-app.post(`/post`, postControlet.createOne);
-app.get(`/post/find-many`, postControlet.findMany);
-app.post(`/post/find-unique`, postControlet.findUnique);
+// POST
+routes.post(`/post`, postController.createOne);
+routes.get(`/post/find-many`, postController.findMany);
+routes.get(`/post/find-unique`, postController.findUnique);
 
 export default routes;

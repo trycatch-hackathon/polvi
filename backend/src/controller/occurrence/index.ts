@@ -3,7 +3,7 @@ import { BaseController } from "../@shared";
 
 export class OccurrenceController extends BaseController {
   constructor() {
-    const occurenceService = new OccurenceService();
+    var occurenceService = new OccurenceService();
     super(occurenceService);
   }
 }

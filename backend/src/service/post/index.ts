@@ -1,5 +1,4 @@
 import { PostRepository } from "../../repository/post";
-import { UserRepository } from "../../repository/user";
 
 export class PostService {
   repository = new PostRepository();

@@ -31,9 +31,9 @@ model Occurrence {
   posts Post[]
 
   content   String
-  published Boolean  @default(false)
-  viewCount Int      @default(0)
 
+  lat Int
+  lng Int
 
   author    User   @relation(fields: [authorId], references: [id])
   authorId  String
