@@ -1,7 +1,6 @@
 import { PostRepository } from "../../repository/post";
-import { UserRepository } from "../../repository/user";
 
-export class PostService {
+class PostService {
   repository = new PostRepository();
 
   async createOne(data: any) {
@@ -19,3 +18,5 @@ export class PostService {
     return result;
   }
 }
+
+export const postService = new PostService()

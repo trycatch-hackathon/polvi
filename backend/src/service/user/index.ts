@@ -1,6 +1,6 @@
 import { UserRepository } from "../../repository/user";
 
-export class UserService {
+class UserService {
   repository = new UserRepository();
 
   async createOne(data: any) {
@@ -18,3 +18,5 @@ export class UserService {
     return result;
   }
 }
+
+export const userService = new UserService()

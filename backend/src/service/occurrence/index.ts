@@ -1,6 +1,6 @@
 import { OccourrenceRepository } from "../../repository/occourrence";
 
-export class OccurenceService {
+class OccurenceService {
   repository = new OccourrenceRepository();
 
   async createOne(data: any) {
@@ -18,3 +18,5 @@ export class OccurenceService {
     return result;
   }
 }
+
+export const occurenceService = new OccurenceService()
