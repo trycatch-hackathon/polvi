@@ -1,0 +1,59 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+model User {
+  id    String     @id @default(uuid())
+  email String  @unique
+  password  String
+  name  String
+  phone  String
+  photoUrl  String
+  role  String
+
+  occurrence Occurrence[]
+  posts Post[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Occurrence {
+  id        String    @id @default(uuid())
+  
+  type     String
+
+  posts Post[]
+
+  content   String
+  published Boolean  @default(false)
+  viewCount Int      @default(0)
+
+
+  author    User   @relation(fields: [authorId], references: [id])
+  authorId  String
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Post {
+  id        String    @id @default(uuid())
+
+  authorId  String
+  author    User  @relation(fields: [authorId], references: [id])
+
+  occurrenceId  String
+  occurrence    Occurrence    @relation(fields: [authorId], references: [id])
+
+  content String
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
