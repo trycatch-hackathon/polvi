@@ -3,28 +3,28 @@ import { prisma } from "../..";
 import { DefaultArgs } from "@prisma/client/runtime/library";
 
 export class UserRepository {
-  prismaClient: PrismaClient<Prisma.PrismaClientOptions, never, DefaultArgs>;
+  prismaClient: any;
 
   constructor() {
     this.prismaClient = prisma;
   }
 
   async createOne(data: any) {
-    const result = await prisma.post.create({
+    const result = await prisma.user.create({
       data,
     });
     return result;
   }
 
   async findUnique(query: any) {
-    const result = await prisma.post.findUnique({
+    const result = await prisma.user.findUnique({
       where: query,
     });
     return result;
   }
 
   async findMany(query: any) {
-    const result = await prisma.post.findMany({
+    const result = await prisma.user.findMany({
       where: query,
     });
 

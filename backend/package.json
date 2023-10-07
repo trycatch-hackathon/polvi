@@ -17,6 +17,7 @@
     "typescript": "5.2.2"
   },
   "prisma": {
-    "seed": "ts-node prisma/seed.ts"
+    "seed": "ts-node prisma/seed.ts",
+    "schema": "src/prisma/schema.prisma"
   }
 }

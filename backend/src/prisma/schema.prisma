@@ -8,12 +8,12 @@ datasource db {
 }
 
 model User {
-  id    String     @id @default(uuid())
+  id    String @id @default(uuid())
   email String  @unique
   password  String
   name  String
   phone  String
-  photoUrl  String
+  avatarUrl  String
   role  String
 
   occurrence Occurrence[]
@@ -24,7 +24,7 @@ model User {
 }
 
 model Occurrence {
-  id        String    @id @default(uuid())
+  id String @id @default(uuid())
   
   type     String
 
@@ -35,8 +35,8 @@ model Occurrence {
   lat Int
   lng Int
 
-  author    User   @relation(fields: [authorId], references: [id])
-  authorId  String
+  author    User?   @relation(fields: [authorId], references: [id])
+  authorId  String?
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
@@ -45,11 +45,11 @@ model Occurrence {
 model Post {
   id        String    @id @default(uuid())
 
-  authorId  String
-  author    User  @relation(fields: [authorId], references: [id])
+  authorId  String?
+  author    User?  @relation(fields: [authorId], references: [id])
 
-  occurrenceId  String
-  occurrence    Occurrence    @relation(fields: [authorId], references: [id])
+  occurrenceId  String?
+  occurrence    Occurrence?    @relation(fields: [authorId], references: [id])
 
   content String
 

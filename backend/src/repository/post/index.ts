@@ -3,7 +3,7 @@ import { prisma } from "../..";
 import { DefaultArgs } from "@prisma/client/runtime/library";
 
 export class PostRepository {
-  prismaClient: PrismaClient<Prisma.PrismaClientOptions, never, DefaultArgs>;
+  prismaClient: any;
 
   constructor() {
     this.prismaClient = prisma;
