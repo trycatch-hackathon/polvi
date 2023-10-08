@@ -29,6 +29,6 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "src/app/components/Navbar/navbar.jsx"
-  ],
+, "src/app/components/Modal/index.tsx"  ],
   "exclude": ["node_modules"]
 }

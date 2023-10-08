@@ -120,10 +120,10 @@ const people = [
                       Usuário
                     </th>
                     <th scope="col" className="px-3 pb-3.5 text-left text-sm font-semibold text-orange-600">
-                    Tipo
+                     Tipo
                     </th>
                     <th scope="col" className="px-3 pb-3.5 text-left text-sm font-semibold text-orange-600">
-                 Status
+                      Status
                     </th>
                     <th scope="col" className="relative pb-3.5 pl-3 pr-4 sm:pr-0">
                       <span className="sr-only">Olho</span>
