@@ -13,9 +13,9 @@ export class UserController {
   
   async findUnique(req: Request<any>, res: Response<any>) {
   
-    const { email } = req.body;
+    const query = req.body;
   
-    const result = await userService.findUnique(email);
+    const result = await userService.findUnique(query);
   
     res.status(200).send(result);
   
