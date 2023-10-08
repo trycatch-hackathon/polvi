@@ -13,7 +13,7 @@ model User {
   password  String
   name  String
   phone  String
-  avatarUrl  String
+  avatarUrl  String?
   role  String
 
   occurrence Occurrence[]
@@ -32,7 +32,7 @@ model Occurrence {
 
   content   String
 
-  imgUrl    String?
+  imgUrls  String[]
 
   lat Float
   lng Float
