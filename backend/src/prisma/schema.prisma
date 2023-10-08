@@ -32,8 +32,8 @@ model Occurrence {
 
   content   String
 
-  lat Int
-  lng Int
+  lat Float
+  lng Float
 
   author    User?   @relation(fields: [authorId], references: [id])
   authorId  String?
@@ -52,7 +52,7 @@ model Post {
   occurrence    Occurrence?    @relation(fields: [authorId], references: [id])
 
   content String
-
+  
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }

@@ -15,36 +15,31 @@ export class UserController {
     res.status(202).send();
   
     const { query } = req.body;
- 
-    
   
     const result = await userService.findMany(query);
-
-    
   
     res.status(200).send(result);
   
     // const result = await userService.findUnique(query);
-    // console.log(
-    //   "🚀 ~ file: index.ts:26 ~ BaseController ~ findUnique ~ result:",
-    //   result,
-    // );
   
     // res.status(200).send(result);
   }
   
   async findMany(req: Request<any>, res: Response<any>) {
-    res.status(202).send();
   
     const { query } = req.body;
-  
-  
-    const result = await userService.findMany(query);
 
+    const result = await userService.findMany(query);
+  
+    res.status(200).send(result);
+  }
+  
+  async findAll(req: Request<any>, res: Response<any>) {
+  
+    const result = await userService.findAll();
   
     res.status(200).send(result);
   }
 }
 
 export const userController = new UserController()
-

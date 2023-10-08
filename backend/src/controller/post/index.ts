@@ -1,12 +1,12 @@
 import { Request, Response } from "express";
-import { userService } from "../../service/user";
+import { postService } from "../../service/post";
 
 export class PostController {
 
   async createOne(req: Request<any>, res: Response<any>) {
     const { data } = req.body;
       
-    const result = await userService.createOne(data);
+    const result = await postService.createOne(data);
     
     res.status(202).send(result);
   }
@@ -15,7 +15,7 @@ export class PostController {
     const { query } = req.body;
   
   
-    const result = await userService.findMany(query);
+    const result = await postService.findMany(query);
 
   
     res.status(200).send(result);
@@ -24,8 +24,15 @@ export class PostController {
   async findMany(req: Request<any>, res: Response<any>) {
     const { query } = req.body;
   
-    const result = await userService.findMany(query);
+    const result = await postService.findMany(query);
  
+  
+    res.status(200).send(result);
+  }
+
+  async findAll(req: Request<any>, res: Response<any>) {
+  
+    const result = await postService.findAll();
   
     res.status(200).send(result);
   }

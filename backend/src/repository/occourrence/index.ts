@@ -30,4 +30,10 @@ export class OccourrenceRepository {
     });
     return result;
   }
+
+  async findAll() {
+    const result = await prisma.occurrence.findMany();
+
+    return result;
+  }
 }

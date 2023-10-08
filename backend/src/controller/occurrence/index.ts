@@ -29,7 +29,13 @@ export class OccurrenceController {
   
     res.status(200).send(result);
   }
+
+  async findAll(req: Request<any>, res: Response<any>) {
+  
+    const result = await occurenceService.findAll();
+  
+    res.status(200).send(result);
+  }
 }
 
 export const occurrenceController = new OccurrenceController()
-

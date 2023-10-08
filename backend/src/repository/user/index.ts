@@ -30,4 +30,10 @@ export class UserRepository {
 
     return result;
   }
+
+  async findAll() {
+    const result = await prisma.user.findMany();
+
+    return result;
+  }
 }

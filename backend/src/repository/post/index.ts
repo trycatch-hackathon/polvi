@@ -29,4 +29,10 @@ export class PostRepository {
     });
     return result;
   }
+
+  async findAll() {
+    const result = await prisma.post.findMany();
+
+    return result;
+  }
 }

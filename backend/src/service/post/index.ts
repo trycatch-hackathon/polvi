@@ -17,6 +17,11 @@ class PostService {
     const result = await this.repository.findMany(query);
     return result;
   }
+
+  async findAll() {
+    const result = await this.repository.findAll();
+    return result;
+  }
 }
 
 export const postService = new PostService()
