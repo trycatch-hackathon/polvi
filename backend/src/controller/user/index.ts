@@ -12,17 +12,13 @@ export class UserController {
   }
   
   async findUnique(req: Request<any>, res: Response<any>) {
-    res.status(202).send();
   
-    const { query } = req.body;
+    const { email } = req.body;
   
-    const result = await userService.findMany(query);
+    const result = await userService.findUnique(email);
   
     res.status(200).send(result);
   
-    // const result = await userService.findUnique(query);
-  
-    // res.status(200).send(result);
   }
   
   async findMany(req: Request<any>, res: Response<any>) {
