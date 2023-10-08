@@ -1,16 +1,18 @@
-import Table from "@/app/components/table";
+import Table from "@/app/components/Table";
 import Navbar from "@/app/components/navbar";
 import Map from "@/app/components/Map";
 
 
 export default function Example() {
     return (
-      <div className="bg-white">
-        <Navbar />  
-          <div className="flex mt-2" >
-            <Map />
-            <Table/>  
-          </div>
+      <div className="flex bg-white">
+            <div className="w-[60%]">
+              <Map />
+            </div>
+            <div className="w-[40%]">
+              <Navbar/>
+              <Table/>  
+            </div>
       </div>
     )
   }

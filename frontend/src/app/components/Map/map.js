@@ -1,7 +1,6 @@
 import 'leaflet/dist/leaflet.css'
 import 'leaflet-defaulticon-compatibility'
 import 'leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css'
-import style from '../../styles/Home.module.css'
 
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
 import MarkerMapa from './markers'
@@ -23,7 +22,7 @@ export default function Map() {
         }
     ];
     return (
-        <MapContainer className={style.map} center={position} zoom={14} scrollWheelZoom={false}>
+        <MapContainer className="h-screen-nav w-full" center={position} zoom={14} scrollWheelZoom={false}>
             <TileLayer
                 attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

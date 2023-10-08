@@ -1,4 +1,4 @@
-import Icon from "./shared/icon"
+import Icon from "../shared/icon"
 
 const people = [
     {
@@ -8,8 +8,38 @@ const people = [
       email: 'lindsay.walton@example.com',
       user: 'Kauan',
       role: 'Concluido',
-      image:
-      'https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+    },
+    {
+      name: 'Matheus',
+      title: 'Front-end Developer',
+      department: 'Optimization',
+      email: 'lindsay.walton@example.com',
+      user: 'Dudu',
+      role: 'Pendente',
+    },
+    {
+      name: 'Dudu',
+      title: 'Front-end Developer',
+      department: 'Optimization',
+      email: 'lindsay.walton@example.com',
+      user: 'Satu',
+      role: 'Agendado',
+    },
+    {
+      name: 'Lindsay Walton',
+      title: 'Front-end Developer',
+      department: 'Optimization',
+      email: 'lindsay.walton@example.com',
+      user: 'Pedro',
+      role: 'Concluido',
+    },
+    {
+      name: 'Kauan Vieira',
+      title: 'Front-end Developer',
+      department: 'Optimization',
+      email: 'lindsay.walton@example.com',
+      user: 'Kauan',
+      role: 'Concluido',
 
     },
     {
@@ -19,8 +49,6 @@ const people = [
       email: 'lindsay.walton@example.com',
       user: 'Dudu',
       role: 'Pendente',
-      image:
-        'https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
     },
     {
       name: 'Dudu',
@@ -29,8 +57,6 @@ const people = [
       email: 'lindsay.walton@example.com',
       user: 'Satu',
       role: 'Agendado',
-      image:
-        'https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
     },
     {
       name: 'Lindsay Walton',
@@ -39,50 +65,67 @@ const people = [
       email: 'lindsay.walton@example.com',
       user: 'Pedro',
       role: 'Concluido',
-      image:
-        'https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+    },
+    {
+      name: 'Kauan Vieira',
+      title: 'Front-end Developer',
+      department: 'Optimization',
+      email: 'lindsay.walton@example.com',
+      user: 'Kauan',
+      role: 'Concluido',
+
+    },
+    {
+      name: 'Matheus',
+      title: 'Front-end Developer',
+      department: 'Optimization',
+      email: 'lindsay.walton@example.com',
+      user: 'Dudu',
+      role: 'Pendente',
+    },
+    {
+      name: 'Dudu',
+      title: 'Front-end Developer',
+      department: 'Optimization',
+      email: 'lindsay.walton@example.com',
+      user: 'Satu',
+      role: 'Agendado',
+    },
+    {
+      name: 'Lindsay Walton',
+      title: 'Front-end Developer',
+      department: 'Optimization',
+      email: 'lindsay.walton@example.com',
+      user: 'Pedro',
+      role: 'Concluido',
     },
 
   ]
   
   export default function Table() {
     return (
-      <div className="px-4 sm:px-6 lg:px-8 w-1/2 h-screen">
+      <div className="px-4 sm:px-6 lg:px-8 overflow-auto h-screen-nav-table">
         <div className="sm:flex sm:items-center">
-          {/* <div className="sm:flex-auto">
-            <h1 className="text-base font-semibold leading-6 text-gray-900">Usuários</h1>
-            <p className="mt-2 text-sm text-gray-700">
-          A seguir a lista dos usuários que relataram algum problema
-            </p>
-          </div> */}
-          {/* <div className="mt-4 sm:ml-16 sm:mt-0 sm:flex-none">
-            <button
-              type="button"
-              className="block rounded-md bg-indigo-600 px-3 py-2 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-            >
-              Add user
-            </button>
-          </div> */}
         </div>
         <div className="mt-8 flow-root">
           <div className="-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
-            <div className="inline-block min-w-full py-2 align-middle sm:px-6 lg:px-8 mt-">
+            <div className="inline-block min-w-full align-middle sm:px-6 lg:px-8 mt-">
               <table className="min-w-full divide-y divide-gray-300">
                 <thead>
                   <tr>
-                    <th scope="col" className="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-orange-600 sm:pl-0">
-                      Problema
+                    <th scope="col" className="pb-3.5 pl-4 pr-3 text-left text-sm font-semibold text-orange-600 sm:pl-0">
+                      Ocorrência
                     </th>
-                    <th scope="col" className="px-3 py-3.5 text-left text-sm font-semibold text-orange-600">
-                   Tipo
+                    <th scope="col" className="px-3 pb-3.5 text-left text-sm font-semibold text-orange-600">
+                      Usuário
                     </th>
-                    <th scope="col" className="px-3 py-3.5 text-left text-sm font-semibold text-orange-600">
-                   Usuário
+                    <th scope="col" className="px-3 pb-3.5 text-left text-sm font-semibold text-orange-600">
+                    Tipo
                     </th>
-                    <th scope="col" className="px-3 py-3.5 text-left text-sm font-semibold text-orange-600">
+                    <th scope="col" className="px-3 pb-3.5 text-left text-sm font-semibold text-orange-600">
                  Status
                     </th>
-                    <th scope="col" className="relative py-3.5 pl-3 pr-4 sm:pr-0">
+                    <th scope="col" className="relative pb-3.5 pl-3 pr-4 sm:pr-0">
                       <span className="sr-only">Olho</span>
                     </th>
                   </tr>
@@ -92,10 +135,7 @@ const people = [
                     <tr key={index}>
                       <td className="whitespace-nowrap py-5 pl-4 pr-3 text-sm sm:pl-0">
                         <div className="flex items-center">
-                          <div className="h-11 w-11 flex-shrink-0">
-                            <img className="h-11 w-11 rounded-full" src={person.image} alt="" />
-                          </div>
-                          <div className="ml-4">
+                          <div>
                             <div className="font-medium text-gray-900">{person.name}</div>
                             <div className="mt-1 text-gray-500">{person.email}</div>
                           </div>
