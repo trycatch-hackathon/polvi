@@ -3,38 +3,23 @@ import { userService } from "../../service/user";
 
 export class UserController {
 
-  async createOne(req: Request<any>, res: Response<any>) {
+  async signup(req: Request<any>, res: Response<any>) {
     const { data } = req.body;
   
-    const result = await userService.createOne(data);
+    const result = await userService.signup(data);
     
     res.status(202).send(result);
   }
   
-  async findUnique(req: Request<any>, res: Response<any>) {
+
+  async login(req: Request<any>, res: Response<any>) {
   
     const query = req.body;
   
-    const result = await userService.findUnique(query);
+    const result = await userService.login(query);
   
     res.status(200).send(result);
   
-  }
-  
-  async findMany(req: Request<any>, res: Response<any>) {
-  
-    const { query } = req.body;
-
-    const result = await userService.findMany(query);
-  
-    res.status(200).send(result);
-  }
-  
-  async findAll(req: Request<any>, res: Response<any>) {
-  
-    const result = await userService.findAll();
-  
-    res.status(200).send(result);
   }
 }
 

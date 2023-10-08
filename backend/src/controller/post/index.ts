@@ -3,10 +3,10 @@ import { postService } from "../../service/post";
 
 export class PostController {
 
-  async createOne(req: Request<any>, res: Response<any>) {
+  async createPost(req: Request<any>, res: Response<any>) {
     const { data } = req.body;
       
-    const result = await postService.createOne(data);
+    const result = await postService.createPost(data);
     
     res.status(202).send(result);
   }
