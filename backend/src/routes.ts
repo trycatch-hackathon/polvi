@@ -9,5 +9,7 @@ routes.post(`/signup`, userController.signup);
 routes.get(`/login`, userController.login);
 routes.get(`/occurrence/find-all`, occurrenceController.findAll);
 routes.post(`/create-post`, postController.createPost);
+routes.post(`/create-occurrence`, occurrenceController.createOne);
+
 
 export default routes;
