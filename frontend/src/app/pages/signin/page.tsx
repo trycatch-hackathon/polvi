@@ -25,7 +25,6 @@ export default function Example() {
             <div className="mx-auto w-full max-w-sm lg:w-96">
               <div>
                 <span className="flex text-orange-600 text-2xl  items-center justify-center font-semibold	">
-              <Icon name="logo_icon" className="flex text-orange-600 hover:text-orange-400 h-12 w-12"/>
               rregular
               </span>
                 <h2 className="mt-8 text-2xl font-bold leading-9 tracking-tight text-orange-600">
