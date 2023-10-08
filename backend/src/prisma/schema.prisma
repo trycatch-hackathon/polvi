@@ -2,15 +2,15 @@ generator client {
   provider = "prisma-client-js"
 }
 
-// datasource db {
-//   provider = "postgresql"
-//   url      = "postgres://root:I3mv47EeKe6vAhlPBNwqb59rT27O1XFg@dpg-ckgvkouafg7c73fckoog-a.oregon-postgres.render.com/irregular_jhfb"
-// }
-
 datasource db {
-  provider = "sqlite"
-  url      = "file:./dev.db"
+  provider = "postgresql"
+  url      = "postgres://root:I3mv47EeKe6vAhlPBNwqb59rT27O1XFg@dpg-ckgvkouafg7c73fckoog-a.oregon-postgres.render.com/irregular_jhfb"
 }
+
+// datasource db {
+//   provider = "sqlite"
+//   url      = "file:./dev.db"
+// }
 
 model User {
   id    String @id @default(uuid())
