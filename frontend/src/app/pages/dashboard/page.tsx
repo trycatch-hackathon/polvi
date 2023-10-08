@@ -1,6 +1,6 @@
-import Table from "../../../app/components/Table";
-import Navbar from "../../../app/components/navbar";
-import Map from "../../../app/components/Map";
+import Table from "../../components/Table";
+import Navbar from "../../components/navbar";
+import Map from "../../components/Map";
 
 
 export default function Example() {
