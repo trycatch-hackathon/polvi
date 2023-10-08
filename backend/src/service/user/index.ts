@@ -7,8 +7,8 @@ import { format } from 'util'
 class UserService {
   repository = new UserRepository();
 
-  async login(data: any) {
-    const result = await this.repository.createOne(data);
+  async login(query: any) {
+    const result = await this.repository.findUnique(query);
     return result;
   }
 
