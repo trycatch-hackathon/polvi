@@ -1,4 +1,4 @@
-import Ocorrencia from "@/app/components/Modal"
+import Ocorrencia from "../../components/Modal"
 
 
 export default function Example() {

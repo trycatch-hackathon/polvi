@@ -1,0 +1,35 @@
+// Users
+{
+    "id": "34253515-602b-4276-b52a-886966b58814",
+    "email": "admin@mail.com",
+    "password": "1234567",
+    "name": "Kauan Adda Silva",
+    "phone": "219987563476",
+    "avatarUrl": "https://avatars.githubusercontent.com/u/115324901?v=4",
+    "role": "admin",
+    "createdAt": "2023-10-07T22:29:30.651Z",
+    "updatedAt": "2023-10-07T22:29:30.651Z"
+}
+
+// Occurrence
+{
+    "id": "73b17f5a-af21-4cd8-ab25-cb188b27bbf2",
+    "type": "LGBTQIA+",
+    "content": "Teste",
+    "imgUrl": "https://scontent-gru1-1.xx.fbcdn.net/v/t31.18172-8/10010159_632945340116644_3477860609265010127_o.jpg?stp=cp0_dst-jpg_e15_q65_s320x320&_nc_cat=104&ccb=1-7&_nc_sid=2d5d41&_nc_ohc=gmmPAptFS88AX9_Ronf&_nc_ht=scontent-gru1-1.xx&oh=00_AfCdL9E8Ws3zwH_EG4igFcEHoDqu92v4UmtaOZFtb46Vgw&oe=65494E4A",
+    "lat": 22.49,
+    "lng": -23.48,
+    "authorId": "34253515-602b-4276-b52a-886966b58814",
+    "createdAt": "2023-10-08T01:22:51.211Z",
+    "updatedAt": "2023-10-08T01:22:51.211Z"
+}
+
+// Post
+{
+    "id": "ad1360c6-46da-4bd8-bce1-3a4303599398",
+    "authorId": "34253515-602b-4276-b52a-886966b58814",
+    "occurrenceId": "73b17f5a-af21-4cd8-ab25-cb188b27bbf2",
+    "content": "Buraco no windows",
+    "createdAt": "2023-10-08T01:47:22.881Z",
+    "updatedAt": "2023-10-08T01:47:22.881Z"
+}

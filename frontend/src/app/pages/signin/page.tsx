@@ -1,6 +1,23 @@
-import Icon from "@/app/components/shared/icon";
+"use client"
+import Icon from "../../components/shared/icon"
+import { useState } from "react"
+import axios from 'axios'
 
 export default function Example() {
+
+  const [email, setEmail] = useState('');
+
+  async function login() {
+    var baseUrl = 'https://irregular-api.onrender.com/login'
+
+    console.log(email)
+    console.log(baseUrl)
+
+    const result = await axios.get(baseUrl, { params: { "email": email } })
+
+    console.log("Result:", result.data)
+  }
+
     return (
       <>
         <div className="flex min-h-screen flex-1 bg-white">
@@ -21,7 +38,7 @@ export default function Example() {
                   </a> */}
                 </p>
               </div>
-  
+
               <div className="mt-10">
                 <div>
                   <form action="#" method="POST" className="space-y-6">
@@ -31,6 +48,7 @@ export default function Example() {
                       </label>
                       <div className="mt-2">
                         <input
+                          onChange={(e) => setEmail(e.target.value)}
                           id="email"
                           name="email"
                           type="email"
@@ -45,7 +63,7 @@ export default function Example() {
                       <label htmlFor="password" className="block text-sm font-medium leading-6 text-orange-500">
              Senha
                       </label>
-                      <div className="mt-2">
+                      <div className="mt-2">  
                         <input
                           id="password"
                           name="password"
@@ -80,6 +98,7 @@ export default function Example() {
                     <div>
                       <button
                         type="submit"
+                        onClick={login}
                         className="flex w-full justify-center rounded-md bg-orange-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-orange-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-500"
                       >
                         <a href="http://localhost:3000/pages/dashboard">
