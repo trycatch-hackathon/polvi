@@ -25,3 +25,15 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+.h-screen-nav {
+  height: 100vh;
+}
+
+.h-screen-nav-table {
+  height: calc(100vh - 4.5rem);
+}
+
+.map {
+  width: 60%;
+}
