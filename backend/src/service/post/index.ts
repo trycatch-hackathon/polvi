@@ -3,7 +3,7 @@ import { PostRepository } from "../../repository/post";
 class PostService {
   repository = new PostRepository();
 
-  async createOne(data: any) {
+  async createPost(data: any) {
     const result = await this.repository.createOne(data);
     return result;
   }

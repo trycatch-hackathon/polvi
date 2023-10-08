@@ -32,7 +32,12 @@ export class OccourrenceRepository {
   }
 
   async findAll() {
-    const result = await prisma.occurrence.findMany();
+    const result = await prisma.occurrence.findMany({
+      include: {
+        author: true,
+        posts: true 
+      }
+    });
 
     return result;
   }
