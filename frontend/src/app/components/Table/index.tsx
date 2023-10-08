@@ -1,4 +1,5 @@
 import Icon from "../shared/icon"
+import Ocorrencia from "../Modal"
 
 const people = [
     {
@@ -101,6 +102,83 @@ const people = [
     },
 
   ]
+
+    const ocurrencies = [{
+        status: 'Concluido',
+        id: "73b17f5a-af21-4cd8-ab25-cb188b27bbf2",
+        type: "Buraco",
+        content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, Nonea! Maiores et perferendis eaque, exercitationem praesentium nihil.",
+        imgUrl: "https://scontent-gru1-1.xx.fbcdn.net/v/t31.18172-8/10010159_632945340116644_3477860609265010127_o.jpg?stp=cp0_dst-jpg_e15_q65_s320x320&_nc_cat=104&ccb=1-7&_nc_sid=2d5d41&_nc_ohc=gmmPAptFS88AX9_Ronf&_nc_ht=scontent-gru1-1.xx&oh=00_AfCdL9E8Ws3zwH_EG4igFcEHoDqu92v4UmtaOZFtb46Vgw&oe=65494E4A",
+        lat: 22.49,
+        lng: -23.48,
+        author:     {
+          name: 'Kauan Vieira',
+          title: 'Front-end Developer',
+          department: 'Optimization',
+          email: 'lindsay.walton@example.com',
+          user: 'Kauan',
+          role: 'Concluido',
+        },
+        createdAt: "2023-10-08T01:22:51.211Z",
+        updatedAt: "2023-10-08T01:22:51.211Z"
+      },
+      {
+        status: 'Concluido',
+        id: "73b17f5a-af21-4cd8-ab25-cb188b27bbf2",
+        type: "Buraco",
+        content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, Nonea! Maiores et perferendis eaque, exercitationem praesentium nihil.",
+        imgUrl: "https://scontent-gru1-1.xx.fbcdn.net/v/t31.18172-8/10010159_632945340116644_3477860609265010127_o.jpg?stp=cp0_dst-jpg_e15_q65_s320x320&_nc_cat=104&ccb=1-7&_nc_sid=2d5d41&_nc_ohc=gmmPAptFS88AX9_Ronf&_nc_ht=scontent-gru1-1.xx&oh=00_AfCdL9E8Ws3zwH_EG4igFcEHoDqu92v4UmtaOZFtb46Vgw&oe=65494E4A",
+        lat: 22.49,
+        lng: -23.48,
+        author:{
+          name: 'Matheus',
+          title: 'Front-end Developer',
+          department: 'Optimization',
+          email: 'lindsay.walton@example.com',
+          user: 'Dudu',
+          role: 'Pendente',
+        },
+        createdAt: "2023-10-08T01:22:51.211Z",
+        updatedAt: "2023-10-08T01:22:51.211Z"
+      },
+      {
+        status: 'Concluido',
+        id: "73b17f5a-af21-4cd8-ab25-cb188b27bbf2",
+        type: "Buraco",
+        content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, Nonea! Maiores et perferendis eaque, exercitationem praesentium nihil.",
+        imgUrl: "https://scontent-gru1-1.xx.fbcdn.net/v/t31.18172-8/10010159_632945340116644_3477860609265010127_o.jpg?stp=cp0_dst-jpg_e15_q65_s320x320&_nc_cat=104&ccb=1-7&_nc_sid=2d5d41&_nc_ohc=gmmPAptFS88AX9_Ronf&_nc_ht=scontent-gru1-1.xx&oh=00_AfCdL9E8Ws3zwH_EG4igFcEHoDqu92v4UmtaOZFtb46Vgw&oe=65494E4A",
+        lat: 22.49,
+        lng: -23.48,
+        author:    {
+          name: 'Dudu',
+          title: 'Front-end Developer',
+          department: 'Optimization',
+          email: 'lindsay.walton@example.com',
+          user: 'Satu',
+          role: 'Agendado',
+        },
+        createdAt: "2023-10-08T01:22:51.211Z",
+        updatedAt: "2023-10-08T01:22:51.211Z"
+      },
+      {
+        status: 'Concluido',
+        id: "73b17f5a-af21-4cd8-ab25-cb188b27bbf2",
+        type: "Poste",
+        content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, Nonea! Maiores et perferendis eaque, exercitationem praesentium nihil.",
+        imgUrl: "https://scontent-gru1-1.xx.fbcdn.net/v/t31.18172-8/10010159_632945340116644_3477860609265010127_o.jpg?stp=cp0_dst-jpg_e15_q65_s320x320&_nc_cat=104&ccb=1-7&_nc_sid=2d5d41&_nc_ohc=gmmPAptFS88AX9_Ronf&_nc_ht=scontent-gru1-1.xx&oh=00_AfCdL9E8Ws3zwH_EG4igFcEHoDqu92v4UmtaOZFtb46Vgw&oe=65494E4A",
+        lat: 22.49,
+        lng: -23.48,
+        author:    {
+          name: 'Dudu',
+          title: 'Front-end Developer',
+          department: 'Optimization',
+          email: 'lindsay.walton@example.com',
+          user: 'Satu',
+          role: 'Agendado',
+        },
+        createdAt: "2023-10-08T01:22:51.211Z",
+        updatedAt: "2023-10-08T01:22:51.211Z"
+      },]
   
   export default function Table() {
     return (
@@ -131,33 +209,28 @@ const people = [
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-gray-200 bg-white">
-                  {people.map((person, index) => (
+                  {ocurrencies.map((ocurrency, index) => (
                     <tr key={index}>
-                      <td className="whitespace-nowrap py-5 pl-4 pr-3 text-sm sm:pl-0">
-                        <div className="flex items-center">
-                          <div>
-                            <div className="font-medium text-gray-900">{person.name}</div>
-                            <div className="mt-1 text-gray-500">{person.email}</div>
-                          </div>
-                        </div>
+                      <td className="whitespace-nowrap py-5 pl-4 pr-3 text-sm sm:pl-0  w-32">
+                            <div className="font-medium text-gray-900">Lorem Ipsum...</div>
                       </td>
                       <td className="whitespace-nowrap px-3 py-5 text-sm text-gray-500">
-                        <div className="text-gray-900">{person.title}</div>
-                        <div className="mt-1 text-gray-500">{person.department}</div>
+                        <div className="text-gray-900">{ocurrency.author.name}</div>
+                        <div className="text-gray-500">{ocurrency.author.email}</div>
                       </td>
                       <td className="whitespace-nowrap px-3 py-5 text-sm text-gray-500">
                         <span className="inline-flex items-center rounded-md bg-orange-50 px-2 py-1 text-xs font-medium text-orange-700 ring-1 ring-inset ring-green-600/20">
-                        {person.user}
+                        {ocurrency.type}
                         </span>
                       </td>
                       <td className="whitespace-nowrap px-3 py-5 text-sm text-gray-500" ><span className="inline-flex items-center rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-700 ring-1 ring-inset ring-green-600/20">
-                      {person.role}
+                        {ocurrency.status}
                         </span></td>
                       <td className="relative whitespace-nowrap py-5 pl-3 pr-4 text-right text-sm font-medium sm:pr-0">
                        
-                        <a href="#" className="text-indigo-600 hover:text-indigo-900">
-                       <Icon name="eye" className=" text-orange-600 hover:text-orange-400" /> <span className="sr-only"> {person.name}</span>
-                        </a>
+                        <button className="text-indigo-600 hover:text-indigo-900">
+                          <Icon name="eye" className=" text-orange-600 hover:text-orange-400" /> <span className="sr-only"></span>
+                        </button>
                       </td>
                     </tr>
                   ))}
