@@ -1,5 +1,4 @@
 "use client"
-// import Icon from "@/app/components/shared/icon"
 import Icon from "../../components/shared/icon"
 import { useState } from "react"
 import axios from 'axios'
